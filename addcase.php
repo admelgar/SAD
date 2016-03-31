@@ -25,7 +25,7 @@ echo('
   </div>
   <div class="form-group">
     <label class="control-label col-sm-5" for="weeks">Payment Period(Weeks) </label>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <input type="number" class="form-control" id="weeks" placeholder="Weeks">
     </div>
   </div>

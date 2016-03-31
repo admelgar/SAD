@@ -8,6 +8,12 @@ body{ /* for the body in general */
 	font-family: 'Montserrat', sans-serif;
 }
 
+#money{ /* for all amounts */
+	text-align: right;
+}
+
+/* -------------------------------------------------------------------------------------------*/
+
 /* LAYOUT.PHP */
 
 .navbar{ /* for the navbar */
@@ -55,6 +61,8 @@ body{ /* for the body in general */
 	max-height: 100px; 
 }
 
+/* -------------------------------------------------------------------------------------------*/
+
 /* MAIN.PHP */
 
 #calendar{
@@ -101,6 +109,8 @@ body{ /* for the body in general */
 	font-size: 14px;
 }
 
+/* -------------------------------------------------------------------------------------------*/
+
 /* ADDCLIENT.PHP */
 
 h1{
@@ -114,7 +124,6 @@ h1{
 	width: 60%;
 	margin-left: 20%;
 }
-
 
 .form-control-inline { /* name of rep and co-maker fields */
     min-width: 0;
@@ -141,6 +150,8 @@ h1{
 	margin-top: .75%;
 }
 
+/* -------------------------------------------------------------------------------------------*/
+
 /* ADDCASE.PHP */
 
 h2{
@@ -159,28 +170,151 @@ h2{
 	margin-bottom: 7%;
 }
 
+/* -------------------------------------------------------------------------------------------*/
+
 /* LOGIN.PHP */
 
 #form_login{
-	padding-top: 18%;
+	margin-top: 18%;
 	width: auto;
-	margin-left: 36%;
-	margin-right: 36%;
+	margin-left: 37%;
+	margin-right: 37%;
+	text-align: left;
+	padding: 20px;
+	border-top: 1px solid #BEC4C7;
+	border-bottom: 1px solid #BEC4C7;
+}
+
+#login_label{
+	border-bottom: 2px solid #E8AF3F;
+	margin-bottom: 4%;
+	padding-top: 6%;
+}
+
+#login_btn{ /* div of the button */
+	margin-top: 13%;
+	width: auto;
+	margin-right: 50%;
+}
+
+#login{ /* button itself */
+	background-color: #F9BE4A;
+	width: auto;
+}
+
+#login_img{
+	font-size: 38px;
+	color: #929292;
+	text-align: center;
+	margin-right: 50%;
+	margin-bottom: 8%;
+	margin-top: 5%;
+}
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* VIEW_ALL.PHP */
+
+#with_searchbar{ /* div ng h1 and search bar */
+	width: 100%;
+	margin-bottom: 20%;
+}
+
+#h1_view{ /* for view all label */
+	color:#E8AF3F;
+	margin-left: .5%;
+	margin-top: 0;
+	float: left;
+	padding-top: 15%;
+}
+
+#for_Search{
+	float: right;
+	width: 200px; 
+	height: 20px; 
+	padding-top: 80%;
+}
+
+#search_glyph{
+	height: 20px;
+}
+
+#view_all_table
+{
+	width: 100%;
+	padding-top: 1%;
+}
+
+#colored_head{
+	background-color: #F9BE4A;
+	height: 20%;
+}
+
+#client_head{ /* client column */
+	width: 23%;
 	text-align: center;
 }
 
-#user_img{
-	position: relative;
-	margin-right: 36%;
-	margin-left: 36%;
-	margin-bottom: 5%;
-	max-width: 60px;
-	max-height: 60px;
+#icons_head{ /* icons column */
+	width: 9%;
+	text-align: center;
 }
 
-#login_btn{
-	margin-top: 5%;
-	width: auto;
-	margin-left: 36%;
-	margin-right: 36%;
+#maturity_head, #release_head, #status_head{ /* release, maturity, status columns */
+	width: 15%;
+	text-align: center;
+}
+
+#loan_head, #amount_head{ /* loan and amount bal columns */
+	width: 11.5%;
+	text-align: center;
+}
+
+#center_column{ /* to center align the column contents */
+	text-align: center;
+}
+
+#icons{ /* glyphicons */
+	padding-right: 3px;
+	display: inline;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-right: 3px;
+	margin-left: 3px;
+	color: #BEC4C7;
+}
+
+#logo_column{ /* to right align the glyphicons */
+	text-align: right;
+}
+
+.container{ /* to adjust row height */
+	margin-top: 2px;
+	height: 38px;
+	margin-bottom: 2px;
+}
+
+.pagination{
+	float: right;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+  border: 3px solid white;
+  background-color: #BEC4C7;
+  color: white;
+}
+
+.pagination > li.active > a{
+	border: 3px solid white;
+	background-color: #F9BE4A;
+}
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* SEARCH.PHP */
+
+#h2_search{
+	color: #F9BE4A;
+	margin-left: .5%;
 }

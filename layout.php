@@ -47,7 +47,7 @@ echo('
 		        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">CLIENTS</a>
 		        	<ul class="dropdown-menu">
 		          		<li><a href="addclient.php">Add Client</a></li>
-		         		<li><a href="#">View All Clients</a></li>
+		         		<li><a href="view_all.php">View All Clients</a></li>
 		        	</ul>
 		      	</li>
 				<li><a href="collection.php">COLLECTIONS</a></li>
