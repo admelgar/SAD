@@ -9,7 +9,7 @@ echo('
 			<div class="input-group" id="for_Search">
 				<input type="text" class="form-control" placeholder="Search">
 				<div class="input-group-btn">
-					<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" id="search_glyph"></span></button>
+					<a href="search.php" class="btn btn-default" role="button"><i class="glyphicon glyphicon-search" id="search_glyph"></i></a>
 				</div>
 			</div>
 		</form>

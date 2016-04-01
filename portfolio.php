@@ -3,7 +3,7 @@
 include("layout.php"); //this includes layout.php which contains the navbar and footer
 
 echo(' 
-	<h1 id="h1_report">COLLECTIONS REPORT</h1>
+	<h1 id="h1_report">PORTFOLIOS REPORT</h1>
 	<div id="form_report">
 	<form class="form-horizontal" role="form">
 	  <div class="form-group">

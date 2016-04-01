@@ -3,6 +3,8 @@
 
 include("layout.php"); //this includes layout.php which contains the navbar and footer
 
+// ADD TOOLTIPS!!!!!!!!!!!!!! :---)
+
 echo(' 
 	<div id="with_searchbar">
 		<h1 id="h1_view">VIEW ALL</h1>
@@ -10,7 +12,7 @@ echo('
 			<div class="input-group" id="for_Search">
 				<input type="text" class="form-control" placeholder="Search">
 				<div class="input-group-btn">
-					<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" id="search_glyph"></span></button>
+					<a href="search.php" class="btn btn-default" role="button"><i class="glyphicon glyphicon-search" id="search_glyph"></i></a>
 				</div>
 			</div>
 		</form>
@@ -31,7 +33,7 @@ echo('
 		  <tbody>
 		    <tr>
 		      <td class="container">Bernardo, Cathy</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span><span class="glyphicon glyphicon-level-up" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a><a href="addcase.php"><i class="glyphicon glyphicon-level-up" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Jul-25-2014</td>
 		      <td class="container" id="center_column">Sep-07-2014</td>
 		      <td class="container" id="money">80,000.00</td>
@@ -40,7 +42,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">Coco, Lady</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Oct-04-2012</td>
 		      <td class="container" id="center_column">Nov-17-2012</td>
 		      <td class="container" id="money">45,000.00</td>
@@ -49,7 +51,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">dela Cruz, Juan</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Jan-15-2013</td>
 		      <td class="container" id="center_column">Feb-28-2013</td>
 		      <td class="container" id="money">20,000.00</td>
@@ -58,7 +60,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">Bernardo, Cathy</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span><span class="glyphicon glyphicon-level-up" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a><a href="addcase.php"><i class="glyphicon glyphicon-level-up" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Jul-25-2014</td>
 		      <td class="container" id="center_column">Sep-07-2014</td>
 		      <td class="container" id="money">80,000.00</td>
@@ -67,7 +69,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">Coco, Lady</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Oct-04-2012</td>
 		      <td class="container" id="center_column">Nov-17-2012</td>
 		      <td class="container" id="money">45,000.00</td>
@@ -76,7 +78,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">dela Cruz, Juan</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Jan-15-2013</td>
 		      <td class="container" id="center_column">Feb-28-2013</td>
 		      <td class="container" id="money">20,000.00</td>
@@ -85,7 +87,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">Bernardo, Cathy</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span><span class="glyphicon glyphicon-level-up" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a><a href="addcase.php"><i class="glyphicon glyphicon-level-up" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Jul-25-2014</td>
 		      <td class="container" id="center_column">Sep-07-2014</td>
 		      <td class="container" id="money">80,000.00</td>
@@ -94,7 +96,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">Coco, Lady</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Oct-04-2012</td>
 		      <td class="container" id="center_column">Nov-17-2012</td>
 		      <td class="container" id="money">45,000.00</td>
@@ -103,7 +105,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">dela Cruz, Juan</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Jan-15-2013</td>
 		      <td class="container" id="center_column">Feb-28-2013</td>
 		      <td class="container" id="money">20,000.00</td>
@@ -112,7 +114,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">Bernardo, Cathy</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span><span class="glyphicon glyphicon-level-up" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a><a href="addcase.php"><i class="glyphicon glyphicon-level-up" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Jul-25-2014</td>
 		      <td class="container" id="center_column">Sep-07-2014</td>
 		      <td class="container" id="money">80,000.00</td>
@@ -121,7 +123,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">Coco, Lady</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Oct-04-2012</td>
 		      <td class="container" id="center_column">Nov-17-2012</td>
 		      <td class="container" id="money">45,000.00</td>
@@ -130,7 +132,7 @@ echo('
 		    </tr>
 		    <tr>
 		      <td class="container">dela Cruz, Juan</td>
-		      <td class="container" id="logo_column"><span class="glyphicon glyphicon-pencil" id="icons"></span><span class="glyphicon glyphicon-plus" id="icons"></span></td>
+		      <td class="container" id="logo_column"><a href="editclient.php"><i class="glyphicon glyphicon-pencil" id="icons"></i></a><a href="input.php"><i class="glyphicon glyphicon-plus" id="icons"></i></a></td>
 		      <td class="container" id="center_column">Jan-15-2013</td>
 		      <td class="container" id="center_column">Feb-28-2013</td>
 		      <td class="container" id="money">20,000.00</td>

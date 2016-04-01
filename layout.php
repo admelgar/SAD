@@ -12,8 +12,9 @@ echo('
 	<title> MEGA Lending Resources </title>
 	<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="css/bootstrap-datepicker3.standalone.css" rel="stylesheet">
-
+	<link href="css/bootstrap-datepicker3.standalone.css" rel="stylesheet">
+	<link href="css/responsive-calendar.css" rel="stylesheet" media="screen">
+	
 	<link rel = "stylesheet" type = "text/css" href = "css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
@@ -42,7 +43,6 @@ echo('
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      	<ul class="nav navbar-nav navbar-right">
 			    <li class="active"><a href="main.php">HOME</a></li>
-			    <li><a href="addcase.php">CASES</a></li>
 				<li class="dropdown">
 		        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">CLIENTS</a>
 		        	<ul class="dropdown-menu">
@@ -50,7 +50,13 @@ echo('
 		         		<li><a href="view_all.php">View All Clients</a></li>
 		        	</ul>
 		      	</li>
-				<li><a href="collection.php">COLLECTIONS</a></li>
+		      	<li class="dropdown">
+		        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">COLLECTIONS</a>
+		        	<ul class="dropdown-menu">
+		          		<li><a href="collection.php">Collections Report</a></li>
+		         		<li><a href="portfolio.php">Portfolios Report</a></li>
+		        	</ul>
+		      	</li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
@@ -65,6 +71,8 @@ echo('
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.js"></script>
+	<script src="js/responsive-calendar.js"></script>
   </body>
 </html>
 ');

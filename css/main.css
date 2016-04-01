@@ -116,13 +116,13 @@ body{ /* for the body in general */
 h1{
 	color:#E8AF3F;
 	padding-top: 12%;
-	margin-left: 22%;
+	margin-left: 25%;
 }
 
 #form_Addclient{ /* add client form */
 	padding-top: 2%;
 	width: 60%;
-	margin-left: 20%;
+	margin-left: 25%;
 }
 
 .form-control-inline { /* name of rep and co-maker fields */
@@ -140,7 +140,7 @@ h1{
 	background-color: #E8AF3F;
 	color: white;
 	width: 30%;
-	margin-top: .75%;
+	margin-top: 1%;
 }
 
 #cancel{ /* cancel button */
@@ -156,13 +156,13 @@ h1{
 
 h2{
 	color:#F9BE4A;
-	margin-left: 22%;
+	margin-left: 25%;
 }
 
 #form_Addcase{ /* add case form */
 	padding-top: 2%;
 	width: 60%;
-	margin-left: 20%;
+	margin-left: 25%;
 }
 
 #picker_case{
@@ -317,4 +317,89 @@ h2{
 #h2_search{
 	color: #F9BE4A;
 	margin-left: .5%;
+}
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* EDITCASE.PHP */
+
+#for_notes{
+	width: 49%;
+	margin-left: 24%;
+	margin-top: 3%;
+	margin-bottom: 2%;
+}
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* INPUT.PHP */
+
+#input_class #class{ /* for payment type dropdown */
+	width: 100%;
+}
+
+#h1_input{
+	color: #E8AF3F;
+	margin-left: 5%;
+}
+
+#h2_input{
+	color: #F9BE4A;
+	margin-left: 5%;
+}
+
+#div_input{ /* div of table and form */
+	padding-top: 2%;
+	width: 100%;
+}
+
+#form_input{
+	width: 43.5%;
+	float: right;
+	margin-left: 0%;
+	margin-right: 5%;
+	margin-top: 8%;
+}
+
+#input_table{
+	width: 41%;
+	float: left;
+	margin-left: 5%;
+	height: auto;
+	font-size: 9px;
+	margin-bottom: 2%;
+}
+
+#input_thead{ /* expected payment header */
+	font-size: 15px;
+	font-weight: bold;
+	width: 100%;
+}
+
+.total{
+	font-weight: bolder;
+}
+
+#input_title{
+	background-color: #E6E6E6;
+}
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* COLLECTION.PHP */
+
+#form_report{
+	padding-top: 3.5%;
+	padding-bottom: 2%;
+	width: 60%;
+	margin-left: 17vw;
+
+}
+
+#h1_report{
+	margin-left: 17vw;
+}
+
+#report_buttons{
+	margin-top: 6.5%;
 }
