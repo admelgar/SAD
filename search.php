@@ -2,7 +2,7 @@
 
 include("layout.php"); //this includes layout.php which contains the navbar and footer
 
-echo(' 
+?>
 	<div id="with_searchbar">
 		<h1 id="h1_view">SEARCH RESULTS FOR</h1>
 		<form class="pull-right" role="search">
@@ -74,6 +74,3 @@ echo('
 	</nav>
 -->
 
-');
-
-?>

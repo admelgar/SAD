@@ -2,7 +2,7 @@
 
 include("layout.php"); //this includes layout.php which contains the navbar and footer
 
-echo(' 
+?>
 <h1 id="h1_input">INPUT PAYMENT</h1>
 <h2 id="h2_input">Bernardo, Cathy</h2>
 
@@ -123,6 +123,3 @@ echo('
   </div>
 </form>
 </div>
-');
-
-?>

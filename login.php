@@ -1,8 +1,8 @@
 <?php 
 
 include("layout.php"); //this includes layout.php which contains the navbar and footer
+?>
 
-echo(' 
 	<div id="form_login">
 	<span class="glyphicon glyphicon-log-in" id="login_img"></span>
 	  <div class="form-group">
@@ -24,6 +24,3 @@ echo('
 	  </div>
 	</form>
 	</div>
-');
-
-?>

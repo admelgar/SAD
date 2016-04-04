@@ -2,7 +2,7 @@
 
 include("layout.php"); //this includes layout.php which contains the navbar and footer
 
-echo(' 
+?> 
 <h1>EDIT CLIENT</h1>
 <h2>Bernardo, Cathy</h2>
 <div id="form_Addclient">
@@ -86,6 +86,3 @@ echo('
   </div>
 </form>
 </div>
-');
-
-?>

@@ -5,7 +5,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
 
 // ADD TOOLTIPS!!!!!!!!!!!!!! :---)
 
-echo(' 
+?> 
 	<div id="with_searchbar">
 		<h1 id="h1_view">VIEW ALL</h1>
 		<form class="pull-right" role="search">
@@ -154,6 +154,3 @@ echo('
 	    <li class="page-item"><a class="page-link" href="#">5</a></li>
 	  </ul>
 	</nav>
-');
-
-?>

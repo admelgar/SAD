@@ -1,8 +1,8 @@
 <?php 
 
 include("layout.php"); //this includes layout.php which contains the navbar and footer
+?>
 
-echo(' 
 <h1>EDIT CASE NOTES</h1>
 <h2>Bernardo, Cathy</h2>
   <div class="form-group" ID="for_notes">
@@ -16,6 +16,3 @@ echo('
   </div>
 </form>
 </div>
-');
-
-?>
