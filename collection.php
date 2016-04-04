@@ -36,8 +36,8 @@ echo('
 	  </div>
 	  <div class="form-group" id="report_buttons"> 
 	    <div class="col-sm-offset-3 col-sm-8">
-	      <button type="submit" class="btn btn-default" id="add_button">Generate </button>
-	      <button type="submit" class="btn btn-default" id="cancel" onClick="window.location=\'http://localhost:8080/addclient.php\';">Cancel </button>
+	    	<a href="collectionpdf.php" class="btn btn-default" id="add_button">Generate</a>
+	    	<a href="main.php" class="btn btn-default" id="add_button">Cancel</a>
 	    </div>
 	  </div>
 	</form>
