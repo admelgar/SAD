@@ -1,6 +1,4 @@
-<?php
 
-echo('
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -17,7 +15,7 @@ echo('
 	
 	<link rel = "stylesheet" type = "text/css" href = "css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-
+	<link rel="stylesheet" href="fullcalendar/fullcalendar.css" />
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn\'t work if you view the page via file:// -->
 </head>
@@ -34,9 +32,9 @@ echo('
 	      </button>
 	      <a class="navbar-brand" href="main.php"><img src="images/logo.jpg" alt="logo" id="logo"></a> <!-- logo for the navbar -->
 	    </div>
-');
 
-echo('
+
+
 <!-- if officer is logged in -->
 
 		 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -61,9 +59,9 @@ echo('
 		</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 		</nav>
-');
+
 //change the href for CASES link
-echo('
+
 <!-- for whoever is logged in --> 
 			
     <!-- jQuery (necessary for Bootstrap\'s JavaScript plugins) -->
@@ -73,7 +71,24 @@ echo('
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jquery.js"></script>
 	<script src="js/responsive-calendar.js"></script>
+
+	<script src="js/moment.min.js"></script>
+	<script src="fullcalendar/fullcalendar.js"></script>
+
+
+
+
+
+ <script>
+ $(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+        // put your options and callbacks here
+    })
+
+});
+ </script>
   </body>
 </html>
-');
- ?>
