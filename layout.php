@@ -7,8 +7,8 @@ echo('
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="shortcut icon" href="/images/favicon.ico" type="image/icon"/>
-	<link rel="icon" href="/images/favicon.ico" type="image/icon"/>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/icon"/>
+	<link rel="icon" href="images/favicon.ico" type="image/icon"/>
 	<title> MEGA Lending Resources </title>
 	<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,7 +32,7 @@ echo('
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="main.php"><img src="/images/logo.jpg" alt="logo" id="logo"></a> <!-- logo for the navbar -->
+	      <a class="navbar-brand" href="main.php"><img src="images/logo.jpg" alt="logo" id="logo"></a> <!-- logo for the navbar -->
 	    </div>
 ');
 
