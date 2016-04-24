@@ -1,6 +1,7 @@
 INSERT INTO accounts VALUES
-(1,'Anna', 'Melgar', 'admin','anna.melgar@yahoo.com','09151230244','12111 Katipunan Avenue, Manila 1008','Go Anna!'),
-(2,'Mandy','Moore','manager','cry@gmail.com','09121144211','12311 J Santos street, QC 1211','Go Mandy!');
+/*password: hehehe; password:whyucry*/
+(1,'Anna', 'Melgar', "admelgar","$2a$10$J7ELAufFTDwm9REekaJSLObhlLnf7MCYvYBnt39ackgkuL.jUUkbi",'admin','anna.melgar@yahoo.com','09151230244','12111 Katipunan Avenue, Manila 1008','Go Anna!'),
+(2,'Mandy','Moore',"mmoore","$2a$04$VUO5cBCOCWCy2o6bc6yCseAz7n9FIo.hnVpqOV5IuiMlk6uDr4n8W",'manager','cry@gmail.com','09121144211','12311 J Santos street, QC 1211','Go Mandy!');
 
 INSERT INTO clients VALUES
 

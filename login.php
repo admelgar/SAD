@@ -1,26 +1,34 @@
 <?php 
+include("database.php");
 
-include("layout.php"); //this includes layout.php which contains the navbar and footer
+
+$username = (isset($_POST['username']) ? $_POST['username'] : '');
+$password = (isset($_POST['password']) ? $_POST['password'] : '');
+
+$sql = "select username,password from accounts where username='".$username."';";
+
+$result = $conn->query($sql);
+
+
+if ($result->num_rows > 0)
+{
+    while($row = $result->fetch_assoc())
+    {
+        $cusernmae= $row["username"];
+        $cpassword= $row["password"];
+    }
+
+    if (password_verify($password, $cpassword))
+    {
+	    echo "<h1>Success!</h1><br><a href='index.php'>Back</a>";
+	}
+}
+else
+{
+    echo "<h1>User does not exist</h1><br><a href='index.php'>Back</a>";
+}
+$conn->close();
+
+
+
 ?>
-
-	<div id="form_login">
-	<span class="glyphicon glyphicon-log-in" id="login_img"></span>
-	  <div class="form-group">
-	  	<div id="login_label">
-	    <label class="control-label" for="username">Username </label>
-	    </div>
-	      <input type="username" class="form-control" id="username" placeholder="Email or Username">
-	  </div>
-	  <div class="form-group">
-	  	<div id="login_label">
-	    <label class="control-label" for="password">Password </label>
-	    </div>
-	      <input type="password" class="form-control" id="password" placeholder="Password">
-	  </div>
-	  <div class="form-group"> 
-	    <div id="login_btn">
-	      <button type="submit" class="btn btn-default" id="login"> Login </button>
-	    </div>
-	  </div>
-	</form>
-	</div>
