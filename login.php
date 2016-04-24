@@ -12,15 +12,16 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0)
 {
-    while($row = $result->fetch_assoc())
-    {
-        $cusernmae= $row["username"];
-        $cpassword= $row["password"];
-    }
+   	$row = $result->fetch_row();
+   	$cpassword = $row[1];
 
     if (password_verify($password, $cpassword))
     {
 	    echo "<h1>Success!</h1><br><a href='index.php'>Back</a>";
+	}
+	else
+	{
+		echo "<h1>Wrong password!</h1><br><a href='index.php'>Back</a>";
 	}
 }
 else
