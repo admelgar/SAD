@@ -1,7 +1,4 @@
-<?php
-include("authorization.php"); 
 
-?>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -10,7 +7,7 @@ include("authorization.php");
 
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/icon"/>
 	<link rel="icon" href="images/favicon.ico" type="image/icon"/>
-	<title>MEGA Lending Resources</title>
+	<title> MEGA Lending Resources </title>
 	<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
 
 	<link href="css/bootstrap-datepicker3.standalone.css" rel="stylesheet">
@@ -35,54 +32,14 @@ include("authorization.php");
 	      </button>
 	      <a class="navbar-brand" href="main.php"><img src="images/logo.jpg" alt="logo" id="logo"></a> <!-- logo for the navbar -->
 	    </div>
-
-
-<div >
-<!-- if officer is logged in -->
-<div class="top"style="text-align:right;">
-	Logged in as <?php print $_SESSION[username]?> || <a href="index.php" action="session_end()">Log out</a>
-	<div>
-		<div>
-			 <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      	<ul class="nav navbar-nav navbar-right">
-				    <li class="active"><a href="main.php">HOME</a></li>
-					<li class="dropdown">
-			        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">CLIENTS</a>
-			        	<ul class="dropdown-menu">
-			          		<li><a href="addclient.php">Add Client</a></li>
-			         		<li><a href="view_all.php">View All Clients</a></li>
-			        	</ul>
-			      	</li>
-			      	<li class="dropdown">
-			        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">COLLECTIONS</a>
-			        	<ul class="dropdown-menu">
-			          		<li><a href="collection.php">Collections Report</a></li>
-			         		<li><a href="portfolio.php">Portfolios Report</a></li>
-			        	</ul>
-			      	</li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div>
-	</div><!--removelater-->
-</div><!-- /.container-fluid -->
+		</div><!-- /.container-fluid -->
 		</nav>
+
+
 
 <!-- for whoever is logged in --> 
 			
-    <!-- jQuery (necessary for Bootstrap\'s JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jquery.js"></script>
-	<script src="js/responsive-calendar.js"></script>
-
-	<script src="js/moment.min.js"></script>
-	<script src="fullcalendar/fullcalendar.js"></script>
-
-
-
-
-
- 

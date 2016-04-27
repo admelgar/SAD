@@ -1,5 +1,5 @@
 <?php 
-include("layout.php"); //this includes layout.php which contains the navbar and footer
+include("layout2.php"); //this includes layout.php which contains the navbar and footer
 ?>
 
 <div id="form_login">

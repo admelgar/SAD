@@ -1,11 +1,15 @@
-<?php 
+<?php
+include("database.php");
+include("layout.php");
+include("authorization.php"); 
 
-include("layout.php"); //this includes layout.php which contains the navbar and footer
-
-//with responsive calendar (not edited)
+$curr_date = date("Y/m/d");
 
 ?>
-	<div id="side_by_side">
+
+
+
+<div id="side_by_side">
 	
 		<div id='calendar'>
 		</div>
@@ -14,80 +18,128 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
 				<table class="table table-hover">
 				  <thead>
 				    <tr id="mainthead">
-				      <th>March 31, 2016</th>
-				    </tr>
-				    <tr id="subthead">
-				      <th>Client</th>
-				      <th>Company</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <tr>
-				      <td>Benitez, Sasa</td>
-				      <td>Ateneo de Manila University</td>
-				    </tr>
-				    <tr>
-				      <td>Cruz, Angelica</td>
-				      <td>Sari-Sari Store</td>
-				    </tr>
-				    <tr>
-				      <td>Santos, Jose</td>
-				      <td>Rainbow Shop</td>
-				    </tr>
-				    <tr>
-				      <td>dela Costa, Horacio</td>
-				      <td>Ice Cream Shop</td>
-				    </tr>
-				    <tr>
-				      <td>Ricci, Matteo</td>
-				      <td>JSEC Enterprisep</td>
-				    </tr>
-				  </tbody>
-				</table>
-			</div>
+<?php
 
 
+$display_date = date("M d, Y");
+?>
+		<th><?php print $display_date?></th>
+				    </tr>
+<?php
+
+$sql = "SELECT clients.representative_last_name, clients.representative_first_name,clients.company_name
+FROM expected, clients
+WHERE expected.expected_collection_date='".$curr_date."'
+AND expected.client_id = clients.client_id;";
+
+$result = $conn->query($sql);
+if ($result->num_rows > 0)
+{
+?>
+		<tr id="subthead">
+			<th>Client</th>
+			<th>Company</th>
+		</tr>
+	</thead>
+		<tbody>
+
+<?php
+	while($row=$result->fetch_array())
+	{
+?>
+		
+				    <tr>
+				      <td><?php print $row[0]?>, <?php print $row[1]?></td>
+				      <td><?php print $row[2]?></td>
+				    </tr>
+<?php
+	}
+}
+else
+{
+?>
+<tr id="subthead">
+			<th colspan="2">No payments due</th>
+		</tr>
+	</thead>
+<?php
+}
+?>
+</tbody>
+</table>
+</div>
+<!--remove date-->
 			<div class="table-responsive" id="for_2ndtable"> 
 				<table class="table table-hover">
 				  <thead>
 				    <tr id="mainthead">
-				      <th colspan="2">Pending Payments</th>
+				      <th colspan="2">Active Cases</th>
 				    </tr>
+
+
+<?php
+$acctid=$_SESSION["id"];
+$sqlcase = "SELECT clients.representative_last_name, clients.representative_first_name,clients.company_name
+FROM accounts,clients
+WHERE
+(clients.status='ACTIVE' OR clients.status='RISK')
+AND clients.account_id = '".$acctid."'
+AND accounts.account_id = '".$acctid."'
+;";
+
+$result2 = $conn->query($sqlcase);
+if ($result2->num_rows > 0)
+{
+?>
 				    <tr id="subthead">
-				      <th id="for_Date">Date</th>
 				      <th>Client</th>
 				      <th>Company</th>
 				    </tr>
 				  </thead>
 				  <tbody>
+<?php
+	while($row2=$result2->fetch_array())
+	{
+?>
+
 				    <tr>
-				      <td>Jan-20-2015</td>
-				      <td>Benitez, Sasa</td>
-				      <td>Ateneo de Manila University</td>
+				      <td><?php print $row2[0]?>, <?php print $row2[1]?></td>
+				      <td><?php print $row2[2]?></td>
 				    </tr>
-				    <tr>
-				      <td>Feb-13-2015</td>
-				      <td>Cruz, Angelica</td>
-				      <td>Sari-Sari Store</td>
-				    </tr>
-				    <tr>
-				      <td>Mar-05-2015</td>
-				      <td>Santos, Jose</td>
-				      <td>Rainbow Shop</td>
-				    </tr>
-				    <tr>
-				      <td>May-21-2015</td>
-				      <td>dela Costa, Horacio</td>
-				      <td>Ice Cream Shop</td>
-				    </tr>
-				    <tr>
-				      <td>July-26-2015</td>
-				      <td>Ricci, Matteo</td>
-				      <td>JSEC Enterprisep</td>
-				    </tr>
-				  </tbody>
-				</table>
-			</div>
-		</div>
+<?php
+	}
+}
+else
+{
+?>
+<tr id="subthead">
+			<th colspan="2">No active cases</th>
+		</tr>
+	</thead>
+<?php
+}
+?>
+</tbody>
+</table>
+</div>
 	</div>
 
+	<?php
+	$aaaa = "2016-2-1";
+	?>
+<script>
+
+ $(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+        // put your options and callbacks here
+        dayClick: function(){
+        	
+        	alert("\'<?php print $aaaa; ?>\'");
+        }
+    });
+
+});
+ </script>
