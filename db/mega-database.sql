@@ -67,7 +67,7 @@ CREATE TABLE expected(
 	total_due FLOAT(6) NOT NULL,
 	status VARCHAR(8) NOT NULL, /*PAID,UNPAID, SKIPPED OVER???*/
 	CONSTRAINT expected_pk PRIMARY KEY (expected_id),
-	CONSTRAINT expected_fk1 FOREIGN KEY (case_id) REFERENCES cases(case_id)
+	CONSTRAINT expected_fk1 FOREIGN KEY (case_id) REFERENCES cases(case_id),
 	CONSTRAINT expected_fk2 FOREIGN KEY (client_id) REFERENCES clients(client_id)
 );
 
@@ -76,6 +76,7 @@ CREATE TABLE actual(
 	client_id MEDIUMINT NOT NULL,
 	case_id MEDIUMINT NOT NULL,
 	account_id MEDIUMINT NOT NULL,
+	expected_id MEDIUMINT NOT NULL,
 	turn_date DATE NOT NULL,
 	type_of_payment VARCHAR(11) NOT NULL,
 	check_number VARCHAR(15) NOT NULL,
