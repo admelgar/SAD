@@ -40,8 +40,8 @@ include("authorization.php");
 <div >
 <!-- if officer is logged in -->
 <div class="top"style="text-align:right;">
-	Logged in as <?php print $_SESSION[username]?> || <a href="index.php" action="session_end()">Log out</a>
-	<div>
+	Logged in as <?php print $_SESSION['username']?> || <a href="index.php" action="session_end()">Log out</a>
+	<div style="margin-bottom:1%;">
 		<div>
 			 <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

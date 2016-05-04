@@ -8,7 +8,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
 ?> 
 	<div id="with_searchbar">
 		<h1 id="h1_view">VIEW ALL</h1>
-		<form class="pull-right" role="search">
+		<form class="pull-right searchsearch" role="search">
 			<div class="input-group" id="for_Search">
 				<input type="text" class="form-control" placeholder="Search">
 				<div class="input-group-btn">

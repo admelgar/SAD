@@ -16,17 +16,6 @@ body{ /* for the body in general */
 
 /* LAYOUT.PHP */
 
-.navbar{ /* for the navbar */
-	background-color: #FFFFFF;
-	border: 0;
-	border-bottom: 2px solid #929292;
-	position: absolute;
-	width: 84%;
-	height: auto;
-	z-index: 1;
-	color: #929292;
-}
-
 .navbar .nav > li > a{ /* for the navbar options */
 	color: gray;
 	position: relative;
@@ -65,10 +54,27 @@ body{ /* for the body in general */
 
 /* MAIN.PHP */
 
+.navbar{ /* for the navbar */
+	background-color: #FFFFFF;
+	border: 0;
+	border-bottom: 2px solid #929292;
+	position: absolute;
+	width: 84%;
+	height: auto;
+	z-index: 1;
+	color: #929292;
+}
+
 #calendar{
-	max-width: 50%;
-	
+	max-width: 47%;
+	padding-left: 2%;
 	float:left;
+}
+
+#tables{ /* current payments list */
+	width: 47%;
+	padding-right: 2%;
+	float: right;
 }
 
 #side_by_side{ /* both tables */
@@ -82,12 +88,7 @@ body{ /* for the body in general */
 
 }
 
-#tables{ /* current payments list */
-	width: 50%;
-	padding-left:1%;
-	float: right;
-	
-}
+
 /*/* pending payments 
 #for_2ndtable{ 
 	padding-top: 3%;
@@ -111,6 +112,11 @@ body{ /* for the body in general */
 
 #subthead{ /* client, company, etc header */
 	font-size: 14px;
+}
+
+.searchsearch{
+	position: relative;
+	z-index: 100!important;
 }
 
 /* -------------------------------------------------------------------------------------------*/
