@@ -18,7 +18,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
 ?>
 <h1>ADD CLIENT</h1>
 <div id="form_Addclient">
-<form class="form-horizontal" role="form">
+<form class="form-horizontal" action="submitClient.php" method="post">
   <div class="form-group">
     <label class="control-label col-sm-4" for="class">Classification </label>
     <div class="col-sm-7">
@@ -88,7 +88,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
   </div>
   <div class="form-group"> 
     <div class="col-sm-offset-4 col-sm-7">
-      <button type="submit" class="btn btn-default" id="add_button" onclick="isEmpty();">Add Client </button>
+      <input type="submit" value="Add Client" class="btn btn-default" id="add_button" onclick="isEmpty();"/>
       <button type="submit" class="btn btn-default" id="cancel" onClick="window.location=\'http://localhost:8080/addclient.php\';">Cancel </button>
     </div>
   </div>
