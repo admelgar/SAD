@@ -72,7 +72,7 @@ body{ /* for the body in general */
 }
 
 #side_by_side{ /* both tables */
-	margin-top: 10%;
+	margin-top: 14%;
 	width: 100%;
 	
 	height:500px;
@@ -240,7 +240,7 @@ h2{
 }
 
 #search_glyph{
-	height: 20px;
+	height: 19px;
 }
 
 #view_all_table
