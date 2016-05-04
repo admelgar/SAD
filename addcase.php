@@ -1,3 +1,15 @@
+<script type = "text/javascript">
+  function isEmpty() {//checks if all fields are complete
+      if (document.getElementById("loan").value == "" || document.getElementById("picker_case").value == "" ||document.getElementById("weeks").value == "" ||
+          document.getElementById("rate").value == ""){
+          alert("Please fill out all fields.");
+          return false;
+      }
+      else {
+          alert("All fields are complete.");
+      }
+  }
+</script>
 <?php 
 
 include("layout.php"); //this includes layout.php which contains the navbar and footer
@@ -44,7 +56,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
   </div>
   <div class="form-group"> 
     <div class="col-sm-offset-4 col-sm-6">
-      <button type="submit" class="btn btn-default" id="add_button">Add Case</button>
+      <button type="submit" class="btn btn-default" id="add_button" onclick="isEmpty();">Add Case</button>
       <button type="submit" class="btn btn-default" id="cancel" onClick="window.location=\'http://localhost:8080/addclient.php\';">Cancel </button>
     </div>
   </div>
