@@ -18,12 +18,12 @@
 		$aib = $loan*$r*$weeks;
 		$atb = $loan+$aib;
 
-		$days = $weeks*7;
-		$year = date('Y', strtotime($dor));
-		$month = date('m', strtotime($dor));
-		$dom = date('d', strtotime($dor));
+		$days = $weeks*7;//convert to days
+		$Y = date('Y', strtotime($dor));//gets year in xxxx
+		$m = date('m', strtotime($dor));//gets month in xx
+		$d = date('d', strtotime($dor));//gets day in xx
 
-		$date = date("Y-m-d", mktime(0, 0, 0, date("m"), date("d")+$days, date("Y")));
+		$dom = date("Y-m-d", mktime(0, 0, 0, int $m = date("m"), int $d = date("d")+$days, int $Y= date("Y")));//computes for date of maturity
 
 		$sql="INSERT INTO cases(case_id,client_id,loan_amount,actual_total_balance,date_of_release,date_of_maturity,payment_period,weekly_interest_rate,notes,status,actual_principal_balance,actual_interest_balance)
 		  VALUES ('$userid','$client_id','$loan','$atb','$dor','$dom','$weeks','$rate','$notes','$status','$loan','$aib')";
