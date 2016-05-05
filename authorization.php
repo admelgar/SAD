@@ -1,7 +1,5 @@
 <? 
 
- session_start();
-
 include("fauthorization.php");
 
 if(!authorized())

@@ -1,26 +1,71 @@
 <?php
-	include 'database.php';
+	include ('database.php');
+	session_start();
+	if(isset($_POST['add_button'])) {
 
-	$class=$lastr=$firstr=$lastc=$firstc=$company=$tel=$email=$status=$notes="";
+		$class=$_POST['class'];
+		$lastr=$_POST['lastr'];
+		$firstr=$_POST['firstr'];
+		$lastc=$_POST['lastc'];
+		$firstc=$_POST['firstc'];
+		$company=$_POST['company'];
+		$oadd=$_POST['oadd'];
+		$tel=$_POST['tel'];
+		$email=$_POST['email'];
+		$status=$_POST['status'];
+		$notes=$_POST['notes'];
 
-	if(!isset($_POST['add_button'])) {
+		$userid = $_SESSION['id'];
 
-		$class = $_POST['class'];
-		$lastr = $_POST['lastr'];
-		$firstr = $_POST['firstr'];
-		$lastc = $_POST['lastc'];
-		$firstc = $_POST['firstc'];
-		$company = $_POST['company'];
-		$tel = $_POST['tel'];
-		$email = $_POST['email'];
-		$status = $_POST['status'];
-		$notes = $_POST['notes'];
+		$sql="INSERT INTO clients(account_id,classification,representative_first_name,representative_last_name,comaker_first_name,comaker_last_name,company_name,address,status,email,contact_number,notes)
+		  VALUES ('$userid','$class','$firstr','$lastr','$firstc','$lastc','$company','$oadd','$status','$email','$tel','$notes')";
 
-		$db->query("INSERT INTO clients (classification, representative_last_name, representative_first_name, comaker_last_name, comaker_first_name, company_name, contact_no, email, status, notes)
-		  VALUES ('$class', '$id_number', '$firstr', '$lastc', '$firstc', '$company', '$tel', '$email', '$status', '$notes')");
+		$result = $conn->query($sql);
 
-		$db->close();
-
-		header("Location: addclient.php");
+		if(!$result){
+			echo('orayt');
+			echo $conn->error;
+		}
+		else{
+			echo('<meta http-equiv="refresh" content="0;URL=addClient.php"/>');
+		}		
+	}
+	else{
+		echo "fuq";
 	}
 ?>
+
+<!-- // <?php
+// 	include ('database.php');
+
+// 	if(isset($_POST['add_button'])) {
+
+// 		$class=$_POST['class'];
+// 		$lastr=$_POST['lastr'];
+// 		$firstr=$_POST['firstr'];
+// 		$lastc=$_POST['lastc'];
+// 		$firstc=$_POST['firstc'];
+// 		$company=$_POST['company'];
+// 		$oadd=$_POST['oadd'];
+// 		$tel=$_POST['tel'];
+// 		$email=$_POST['email'];
+// 		$status=$_POST['status'];
+// 		$notes=$_POST['notes'];
+
+// 		$sql="INSERT INTO clients(account_id, classification, representative_first_name, representative_last_name, comaker_first_name, comaker_last_name, company_name, address, status, email, contact_number, notes)
+// 		  VALUES ('3','$class','$firstr','$lastr','$firstc','$lastc','$company','$oadd','$status','$email','$tel','$notes')";
+
+// 		$result = $conn->query($sql);
+
+// 		if(!$result){
+// 			echo('orayt');
+// 			echo $conn->error;
+// 		}
+// 		else{
+// 			echo('nuna bes');
+// 		}		
+// 	}
+// 	else{
+// 		echo "fuq";
+// 	}
+// ?> -->

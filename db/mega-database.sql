@@ -26,6 +26,7 @@ CREATE TABLE clients(
 	comaker_first_name VARCHAR(50) NOT NULL,
 	comaker_last_name VARCHAR(50) NOT NULL, 
 	company_name VARCHAR(50) NOT NULL,
+	address VARCHAR(200) NOT NULL,
 	status VARCHAR(8) NOT NULL,
 	email VARCHAR(50),
 	contact_number VARCHAR(30),

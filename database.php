@@ -1,9 +1,11 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
+$db = "mega";
 
-$conn = new mysqli($servername, $username, $password, "mega");
+$conn = new mysqli ($servername, $username, $password);
+$conn->select_db($db);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
