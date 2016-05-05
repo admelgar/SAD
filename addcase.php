@@ -1,15 +1,3 @@
-<script type = "text/javascript">
-  function isEmpty() {//checks if all fields are complete
-      if (document.getElementById("loan").value == "" || document.getElementById("picker_case").value == "" ||document.getElementById("weeks").value == "" ||
-          document.getElementById("rate").value == ""){
-          alert("Please fill out all fields.");
-          return false;
-      }
-      else {
-          alert("All fields are complete.");
-      }
-  }
-</script>
 <?php 
 
 include("layout.php"); //this includes layout.php which contains the navbar and footer
@@ -22,14 +10,14 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
   <div class="form-group">
     <label class="control-label col-sm-4" for="loan">Loan Amount </label>
     <div class="col-sm-4">
-      <input type="number" class="form-control" id="loan" placeholder="Enter amount">
+      <input type="number" class="form-control" id="loan" placeholder="Enter amount" required>
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-4" for="release">Date of Release </label>
     <div class="col-sm-4">
     <div class="input-group date" data-provide="datepicker-inline" id="picker_case">
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" id="dor" required>
       <div class="input-group-addon">
           <span class="glyphicon glyphicon-th"></span>
       </div>
@@ -39,13 +27,13 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
   <div class="form-group">
     <label class="control-label col-sm-4" for="weeks">Payment Period </label>
     <div class="col-sm-3">
-      <input type="number" class="form-control" id="weeks" placeholder="Weeks">
+      <input type="number" class="form-control" id="weeks" placeholder="Weeks" required>
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-4" for="rate">Weekly Interest Rate </label>
     <div class="col-sm-3">
-      <input type="number" class="form-control" id="rate" placeholder="Rate (%)">
+      <input type="number" class="form-control" id="rate" placeholder="Rate (%)" required>
     </div>
   </div>
   <div class="form-group">
@@ -56,7 +44,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
   </div>
   <div class="form-group"> 
     <div class="col-sm-offset-4 col-sm-6">
-      <button type="submit" class="btn btn-default" id="add_button" onclick="isEmpty();">Add Case</button>
+      <button type="submit" class="btn btn-default" id="add_button">Add Case</button>
       <button type="submit" class="btn btn-default" id="cancel" onClick="window.location=\'http://localhost:8080/addclient.php\';">Cancel </button>
     </div>
   </div>
