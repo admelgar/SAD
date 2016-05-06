@@ -5,7 +5,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
 
 
 ?>
-	<h1 id="h1_report">PORTFOLIOS REPORT</h1>
+	<h1 id="h1_report">RELEASE REPORT</h1>
 	<div id="form_report">
 	<form class="form-horizontal" role="form">
 	  <div class="form-group">
@@ -39,7 +39,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
 	  </div>
 	  <div class="form-group" id="report_buttons"> 
 	    <div class="col-sm-offset-3 col-sm-8">
-	      	<a href="releasepdf.php" class="btn btn-default" id="add_button">Generate</a>
+	      	<a href="portfoliopdf.php" class="btn btn-default" id="add_button">Generate</a>
 	    	<a href="main.php" class="btn btn-default" id="add_button">Cancel</a>
 	    </div>
 	  </div>

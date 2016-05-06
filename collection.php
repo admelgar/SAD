@@ -31,6 +31,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
 	      <select class="form-control form-control-inline" id="class">
 	      <option>Micro</option>
 	      <option>SME</option>
+	      <option>Both</option>
 	    </select>
 	    </div>
 	  </div>
