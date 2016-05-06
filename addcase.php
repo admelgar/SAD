@@ -6,7 +6,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
 <h1>ADD CASE</h1>
 <h2>Bernardo, Cathy</h2>
 <div id="form_Addcase">
-<form class="form-horizontal" role="form">
+<form class="form-horizontal" action="submitCase.php" method="post">
   <div class="form-group">
     <label class="control-label col-sm-4" for="loan">Loan Amount </label>
     <div class="col-sm-4">
