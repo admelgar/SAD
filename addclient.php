@@ -57,7 +57,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-4" for="tel">Telephone Number </label>
+    <label class="control-label col-sm-4" for="tel">Contact Number </label>
     <div class="col-sm-6">
       <input type="text" class="form-control" id="tel" name="tel" placeholder="Enter telephone number" required>
     </div>

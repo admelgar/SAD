@@ -54,7 +54,7 @@ include("authorization.php");
 			        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">CLIENTS</a>
 			        	<ul class="dropdown-menu">
 			          		<li><a href="addclient.php">Add Client</a></li>
-			         		<li><a href="view_all.php">View All Clients</a></li>
+			         		<li><a href="viewClient.php">View All Clients</a></li>
 			        	</ul>
 			      	</li>
 			      	<li class="dropdown">
