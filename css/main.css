@@ -61,7 +61,7 @@ body{ /* for the body in general */
 	position: absolute;
 	width: 84%;
 	height: auto;
-	z-index: 1;
+	z-index: 99999!important;
 	color: #929292;
 }
 
@@ -258,15 +258,16 @@ h2{
 #colored_head{
 	background-color: #F9BE4A;
 	height: 20%;
+	padding: 2%;
 }
 
 #client_head{ /* client column */
-	width: 23%;
+	width: 18%;
 	text-align: center;
 }
 
 #icons_head{ /* icons column */
-	width: 9%;
+	width: 8%;
 	text-align: center;
 }
 
@@ -276,7 +277,7 @@ h2{
 }
 
 #loan_head, #amount_head{ /* loan and amount bal columns */
-	width: 11.5%;
+	width: 12%;
 	text-align: center;
 }
 
@@ -413,3 +414,26 @@ h2{
 #report_buttons{
 	margin-top: 6.5%;
 }
+
+/* VIEW ALL OFFICERS.PHP */
+
+#officer_head, #email_head{ /* officer, email columns */
+	width: 20%;
+	text-align: center;
+}
+
+#cases_head, #casesf_head{ /* cases column */
+	width: 5%;
+	text-align: center;
+}
+
+#contact_head, #notes_head{ /* contact numbers and notes columns */
+	width: 12%;
+	text-align: center;
+}
+
+#address_head{ /* address column */
+	width: 22%;
+	text-align: center;
+}
+

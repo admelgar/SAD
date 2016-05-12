@@ -20,6 +20,7 @@
 include("layout.php"); //this includes layout.php which contains the navbar and footer
 
 ?>
+
 <h1>ADD CLIENT</h1>
 <div id="form_Addclient">
 <form class="form-horizontal" action="submitClient.php" method="post">

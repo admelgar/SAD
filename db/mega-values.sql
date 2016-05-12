@@ -13,8 +13,8 @@ INSERT INTO accounts VALUES
 INSERT INTO clients VALUES
 /*admin is manager who does not handle/input any client*/
 (1,'3','Micro','Mar','Roxas','Leni','Robredo','Daang Matuwid Inc.','TABI','ACTIVE','tsinelas@yellow.com','0927123143','Go RoRo!'),
-(2,'4','Medium','Miriam','Santiago','Bong Bong','Marcos','Red Company Inc.','DOON','RISK', 'mdsbbm@red.com','09121212453',''),
-(3,'2','Small','Grace','Poe','Chiz','Escudero','Coffee Bean and Tea Leaf','CBTL','IDLE','coffeeservice@cbtl.com','09817241832',''),
+(2,'4','SME','Miriam','Santiago','Bong Bong','Marcos','Red Company Inc.','DOON','RISK', 'mdsbbm@red.com','09121212453',''),
+(3,'2','SME','Grace','Poe','Chiz','Escudero','Coffee Bean and Tea Leaf','CBTL','IDLE','coffeeservice@cbtl.com','09817241832',''),
 (4,'2','Micro','Rody','Duterte','Alan','Cayetano','Starbucks Partners','ORACLE','IDLE','customerservice@starbs.com','09123111112','');
 
 INSERT INTO cases VALUES

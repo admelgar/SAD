@@ -21,7 +21,7 @@ echo('
   <div class="form-group">
     <label class="control-label col-sm-4" for="loan">Loan Amount </label>
     <div class="col-sm-4">
-      <input type="number" class="form-control" id="loan" name="loan" placeholder="Enter amount" required>
+      <input type="number" class="form-control" id="loan" name="loan" placeholder="Micro: 3-20K, SME: 30K+" required>
     </div>
   </div>
   <div class="form-group">
@@ -42,9 +42,13 @@ echo('
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-4" for="rate">Weekly Interest Rate </label>
+    <label class="control-label col-sm-4" for="rate">Weekly Interest Rate (%) </label>
     <div class="col-sm-3">
-      <input type="number" class="form-control" id="rate" name="rate" placeholder="Rate (%)" required>
+      <select class="form-control form-control-inline" id="rate" name="rate">
+      <option>1.75</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
     </div>
   </div>
   <div class="form-group">

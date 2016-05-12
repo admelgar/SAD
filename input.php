@@ -1,11 +1,21 @@
 <?php 
 
 include("layout.php"); //this includes layout.php which contains the navbar and footer
+include_once("database.php");
+$sql = 'SELECT client_id, representative_last_name, representative_first_name  FROM clients WHERE client_id = "'.$_GET['value'].'"';
 
 ?>
 <h1 id="h1_input">INPUT PAYMENT</h1>
-<h2 id="h2_input">Bernardo, Cathy</h2>
-
+<h2 id="h2_input">
+<?php 
+$result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) 
+  {
+    while($row = mysqli_fetch_assoc($result)) 
+    {
+      echo $row['representative_last_name'].", ".$row['representative_first_name'];
+echo('
+</h2>
 <div id="div_input">
 <div class="table-responsive" id="input_table">
     <table class="table table-hover">
@@ -69,12 +79,12 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
   </div>
   </div>
 
-<form class="form-horizontal" role="form" id="form_input">
+<form class="form-horizontal" action="submitInput.php?value='.$row['client_id'].'" method="post" role="form" id="form_input">
   <div class="form-group">
     <label class="control-label col-sm-offset-2 col-sm-4" for="turn">Turn Date </label>
     <div class="col-sm-6">
     <div class="input-group date" data-provide="datepicker-inline" id="picker_case">
-      <input type="text" class="form-control">
+      <input type="text" name="turndate" class="form-control">
       <div class="input-group-addon">
           <span class="glyphicon glyphicon-th"></span>
       </div>
@@ -84,7 +94,7 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
   <div class="form-group">
     <label class="control-label col-sm-offset-2 col-sm-4" for="class">Payment Type</label>
     <div class="col-sm-6" id="input_class"> 
-      <select class="form-control form-control-inline" id="class">
+      <select class="form-control form-control-inline" id="class" name="classtype">
       <option>Cash</option>
       <option>Check</option>
       <option>Collateral</option>
@@ -94,32 +104,36 @@ include("layout.php"); //this includes layout.php which contains the navbar and 
   <div class="form-group">
     <label class="control-label col-sm-offset-2 col-sm-4" for="check">Check Number </label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="check" placeholder="Check Number" readonly>
+      <input type="text" class="form-control" id="check" name="check" placeholder="Check Number" readonly>
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-offset-2 col-sm-4" for="principal">Principal Paid </label>
     <div class="col-sm-6">
-      <input type="number" class="form-control" id="principal" placeholder="Principal Paid">
+      <input type="number" class="form-control" id="principal" name="principal" placeholder="Principal Paid">
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-offset-2 col-sm-4" for="interest">Interest Paid </label>
     <div class="col-sm-6">
-      <input type="number" class="form-control" id="interest" placeholder="Interest Paid">
+      <input type="number" class="form-control" id="interest" name="interest" placeholder="Interest Paid">
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-offset-2 col-sm-4" for="rate">Penalty Paid </label>
     <div class="col-sm-6">
-      <input type="number" class="form-control" id="rate" placeholder="Penalty Paid">
+      <input type="number" class="form-control" id="rate" name="penalty" placeholder="Penalty Paid">
     </div>
   </div>
   <div class="form-group"> 
     <div class="col-sm-offset-6 col-sm-6">
-      <button type="submit" class="btn btn-default" id="add_button">Input</button>
-      <button type="submit" class="btn btn-default" id="cancel" onClick="window.location=\'http://localhost:8080/addclient.php\';">Cancel </button>
+      <button type="submit" class="btn btn-default" name="add_button" id="add_button">Input</button>
+      <button type="submit" class="btn btn-default" id="cancel" onClick="window.location=\'http://localhost/addclient.php\';">Cancel </button>
     </div>
   </div>
 </form>
 </div>
+');
+    }
+  }
+?>
